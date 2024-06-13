@@ -467,7 +467,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 224667007}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1948003709}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &224667007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 378094882}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1948003709}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &501728062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,6 +1723,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 610afbb40c4385d42aa33adfe3531f0a, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: c72c97e952bf7834b85e6164373d310d, type: 3}
+    - target: {fileID: 9500000, guid: 610afbb40c4385d42aa33adfe3531f0a, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -1727,7 +1755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1844491604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1891,11 +1919,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2069780819}
-  gameStart: 0
+  isGameStart: 0
+  objectcollision: 0
   exit: 0
   score: 0
   titleScreen: {fileID: 218801449}
   gameOverScreen: {fileID: 1511511231}
+  restartButton: {fileID: 224667006}
   button: {fileID: 501728066}
 --- !u!65 &1948003710
 BoxCollider:
@@ -1917,7 +1947,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.25688863, y: 0.5534444, z: 1}
-  m_Center: {x: 0.3715557, y: -0.5966737, z: 0}
+  m_Center: {x: 0.64, y: -0.5966737, z: 0}
 --- !u!4 &1948003711
 Transform:
   m_ObjectHideFlags: 0
@@ -2049,6 +2079,7 @@ GameObject:
   - component: {fileID: 2069780818}
   - component: {fileID: 2069780820}
   - component: {fileID: 2069780819}
+  - component: {fileID: 2069780822}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -2172,6 +2203,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069780817}
   m_CullTransparentMesh: 1
+--- !u!114 &2069780822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069780817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0672a419ee7984cb8ac57930528acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2097761372
 GameObject:
   m_ObjectHideFlags: 0

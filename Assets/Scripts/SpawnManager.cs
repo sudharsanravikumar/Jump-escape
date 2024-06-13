@@ -30,14 +30,15 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(gameManager.isGameStart + " is spawn");
     }
 
     void SpawnObstacles()
     {
-        if(playerControllerScript.gameover == false &&  gameManager.gameStart == true)
+        if(playerControllerScript.gameover == false &&  gameManager.isGameStart)
         {
             Instantiate(obstaclePrejabs, spawnPos, obstaclePrejabs.transform.rotation);
+
         }
     }
 }
