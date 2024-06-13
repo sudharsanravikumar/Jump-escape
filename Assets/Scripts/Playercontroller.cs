@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playercontroller : MonoBehaviour
+public class Playercontroller : GameManager
 {
     private Rigidbody playerRb;
 
@@ -32,6 +32,7 @@ public class Playercontroller : MonoBehaviour
         Physics.gravity *= gravityModifier;
         playerAnim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
+        
 
     }
 
@@ -49,6 +50,9 @@ public class Playercontroller : MonoBehaviour
           dirtySplatter.Stop();
 
           playerAudio.PlayOneShot(jumpSound, 5.0f);
+
+          playerAnim.enabled = gameover;
+          Debug.Log(gameStart + "Is game started");
         }
 
     }
