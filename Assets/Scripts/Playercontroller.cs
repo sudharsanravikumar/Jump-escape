@@ -25,14 +25,14 @@ public class Playercontroller : GameManager
     public AudioClip jumpSound;
 
     public AudioClip crashSound;
-
+    private GameManager gameManager;
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         playerAnim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
     }
 
@@ -51,8 +51,6 @@ public class Playercontroller : GameManager
 
           playerAudio.PlayOneShot(jumpSound, 5.0f);
 
-          playerAnim.enabled = gameover;
-          Debug.Log(gameStart + "Is game started");
         }
 
     }
@@ -67,7 +65,6 @@ public class Playercontroller : GameManager
         if(collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-
             dirtySplatter.Play();
         }else if(collision.gameObject.CompareTag("Obstacle"))
         {
@@ -84,6 +81,7 @@ public class Playercontroller : GameManager
             dirtySplatter.Stop();
 
             playerAudio.PlayOneShot(crashSound, 1.0f);
+
         }        
     }
 }

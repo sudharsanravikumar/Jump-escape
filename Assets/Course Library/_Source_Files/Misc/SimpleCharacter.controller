@@ -11,7 +11,7 @@ AnimatorController:
   m_AnimatorParameters:
   - m_Name: Speed_f
     m_Type: 1
-    m_DefaultFloat: 0.5
+    m_DefaultFloat: 1.5
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
@@ -89,6 +89,12 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - m_Name: Jump_b
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: StaticJump_trig
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -4364,7 +4370,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed_f
-    m_EventTreshold: 0.5
+    m_EventTreshold: 1.5
   - m_ConditionMode: 1
     m_ConditionEvent: Static_b
     m_EventTreshold: 0.5
@@ -4374,9 +4380,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.15957446
+  m_TransitionDuration: 0.15957455
   m_TransitionOffset: 0
-  m_ExitTime: 0.9
+  m_ExitTime: 0.9000001
   m_HasExitTime: 0
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
@@ -5234,7 +5240,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump_trig
+    m_ConditionEvent: StaticJump_trig
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110272805}
